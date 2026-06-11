@@ -22,6 +22,14 @@
             padding: 20px;
         }
 
+        /* 顶部横幅大图 */
+        .banner-img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
         /* 顶部标题区域 */
         .header {
             text-align: center;
@@ -63,6 +71,16 @@
             margin: 8px 0;
         }
 
+        /* QSL卡片预览图，适配你实际上传文件名qsL_card.jpg */
+        .qsl-preview {
+            width: 95%;
+            max-width: 700px;
+            display: block;
+            margin: 15px auto;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+
         /* 超链接 */
         a {
             color: #0066cc;
@@ -95,6 +113,9 @@
     </style>
 </head>
 <body>
+    <!-- 顶部横幅大图 -->
+    <img src="banner.jpg" alt="BG7NYV 业余电台横幅" class="banner-img">
+
     <!-- 顶部呼号信息 -->
     <div class="header">
         <h1>BG7NYV</h1>
@@ -111,9 +132,11 @@
         <p><strong>English：</strong>Hello, I'm Zhuang Kaihuan, callsign BG7NYV based in Shenzhen. I operate mainly on VHF/UHF FM via Wutongshan Repeater and Nanshan Link. Nice to meet you on the air!</p>
     </div>
 
-    <!-- QSL 卡片交换说明 -->
+    <!-- QSL 卡片交换说明 + 卡片预览图 -->
     <div class="box">
         <h2>📬 QSL 卡片交换 / QSL Info</h2>
+        <!-- 匹配你上传的图片文件名 qsL_card.jpg -->
+        <img src="qsL_card.jpg" alt="BG7NYV QSL卡片样式" class="qsl-preview">
         <ul>
             <li>📧 QSL 专用邮箱：<a href="mailto:13075248486@163.com">13075248486@163.com</a></li>
             <li>📡 常用通联：FM 模式，梧桐山中继、南山链路</li>
@@ -145,7 +168,6 @@
             document.getElementById("utcTime").innerText = now.toUTCString();
         }
         showUTC();
-        // 每秒刷新时间
         setInterval(showUTC, 1000);
     </script>
 </body>
